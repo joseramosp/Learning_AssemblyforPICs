@@ -1,0 +1,34 @@
+---------------------------------------------
+PIC ASSEMBLER LISTING
+Line    Address Opcode  Instruction
+---------------------------------------------
+0001    000000          ; Jose Ramos |  Student ID: 00299444
+0002    000000          ; Lab: Chapter 3 Labs Part2
+0003    000000          ; March 3 of 2019
+0004    000000          
+0005    000000          	NUM0  EQU B'00111111'	; Creating a label for the representation of 0 in a 7seg in binary 
+0006    000000          	NUM1  EQU B'00000110'	; Creating a label for the representation of 1 in a 7seg in binary
+0007    000000          	NUM2  EQU B'01011011'	; Creating a label for the representation of 2 in a 7seg in binary
+0008    000000          	NUM9  EQU B'01100111'	; Creating a label for the representation of 9 in a 7seg in binary
+0009    000000          
+0010    000000  6A92    	CLRF TRISA		;CLREAR PORTA
+0011    000002  6A93    	CLRF TRISB		;CLREAR PORTB
+0012    000004  6A94    	CLRF TRISC		;CLREAR PORTC
+0013    000006  6A95    	CLRF TRISD		;CLREAR PORTD
+0014    000008          
+0015    000008  0E5B    	MOVLW NUM2	; Copying the literal NUM2 to WREG.
+0016    00000A  6E80    	MOVWF PORTA	; Copying the value in WREG to PORTA.
+0017    00000C          
+0018    00000C  0E3F    	MOVLW NUM0	; Copying the literal NUM0 to WREG.
+0019    00000E  6E81    	MOVWF PORTB	; Copying the value in WREG to PORTB.
+0020    000010          
+0021    000010  0E06    	MOVLW NUM1	; Copying the literal NUM1 to WREG.
+0022    000012  6E82    	MOVWF PORTC	; Copying the value in WREG to PORTC.
+0023    000014          
+0024    000014  0E67    	MOVLW NUM9	; Copying the literal NUM9 to WREG.
+0025    000016  6E83    	MOVWF PORTD	; Copying the value in WREG to PORTD.
+0026    000018          
+0027    000018  0003    	SLEEP		; Going into standby mode
+0028    00001A          	END		; ShutTing down the PIC18
+---------------------------------------------
+Number of errors = 0
